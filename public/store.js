@@ -117,7 +117,6 @@ for (let i = 0; i < products.length; i++) {
     }
 }
 
-
 // Runs to generate a validation message for quantity input
 function validateQuantity(quantity) {
     // Set variables and grab the number from the quantity and set it to a number

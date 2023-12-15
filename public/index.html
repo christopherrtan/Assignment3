@@ -95,21 +95,10 @@ var numInCart = order.reduce(function(accumulator, currentValue) {
 // Update cart size display
 document.getElementById('cartText').innerHTML = `View Cart (${numInCart})`;
 
-// Retrieve URL parameters
-let params = (new URL(document.location)).searchParams;
-let thankYouMessage = params.get('thankYou');
-
 // Display welcome message
 if (username !== null && fullName !== '' && fullName !== 'null' && signin == 'true') {
     document.getElementById('WelcomeDiv').innerHTML += `<h3 class="text">Welcome ${fullName}!</h3>`;
     document.getElementById('usernameEntered').value = username;
-}
-
-// Show modal if thank you message is present
-if (thankYouMessage == 'true') {
-    $(document).ready(function(){
-        $("#thanksModal").modal('show');
-    });
 }
 
 function getCookieValue(cookieName) {

@@ -5,20 +5,8 @@ let subtotal = 0;
 let taxAmount = 0;
 let shipping = 0;
 
-
-
 //opens the url params
 let params = (new URL(document.location)).searchParams;
-        //initializes empty order array
-
-//for each prod, push the value to the array
-/*params.forEach((value,key) => {
-    if (key.startsWith('prod')) {
-            order.push(parseInt(value));
-        }
-});*/
-
-//Sets the parameters from the url
 
 //gets params from cookies stored, if logged in, replace sign in with sign out
 let signin = decodeURIComponent(getCookieValue('signIn'));
@@ -26,10 +14,7 @@ let username = decodeURIComponent(getCookieValue('username')); // Replace with y
 let fullName = decodeURIComponent(getCookieValue('fName'));
 
 document.addEventListener("DOMContentLoaded", function() {
-    
-
     if (signin == 'true') {
-        
         document.getElementById("loginPlaceholder").innerHTML = 
             `<form id="signOutForm" action="signOutKeepCart" method="POST">
             <button type="submit" class="text-button">Sign Out</button>
@@ -66,28 +51,19 @@ if(username !== null && username !== ''){
 
 }
 
-
-
 //fill the hidden values for the post to complete purchase
 document.getElementById('orderInputComplete').value = JSON.stringify(order);
-
-
-        //console.log(order);
     var numInCart = order.reduce(function(accumulator, currentValue) {
         return accumulator + currentValue;
     }, 0);
-    
-
     document.getElementById('cartText').innerHTML = `View Cart (${numInCart})`;
 //generate all the item rows
 if(numInCart == 0){
     let table = document.getElementById("invoiceTable");
     table.innerHTML = '<h1>Cart Empty! Get Shopping!</h1>'
-
 }
 else{
     generateItemRows();
-    
 
 //validates textboxes
 document.addEventListener('DOMContentLoaded', (event) => {
@@ -98,12 +74,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
     });
 });
 
-// calculate subtotal
-
 //calculate tax
  let tax = (subtotal*0.0575);
-
-
 
  //checks the shipping price
  if(subtotal <= 50)
@@ -120,20 +92,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
  //calculates total
  let total = tax+subtotal+shipping;
  
- 
  //insert footer row values
  document.getElementById("subtotal_cell").innerHTML = "$" + subtotal.toFixed(2);
  document.getElementById("tax_cell").innerHTML = "$" + tax.toFixed(2);
  document.getElementById("shipping_cell").innerHTML = "$"+shipping.toFixed(2);
  document.getElementById("total_cell").innerHTML = "$"+total.toFixed(2);
- 
- 
 }
 
-
-
-//function to validate the quantity, returns a string if not a number, negative, not an integer, or a combination of both
-//if no errors in quantity, returns empty string
+//function to validate the quantity
 function validateQuantity(quantity){
     if(isNaN(quantity)){
         return "Please Enter a Number";
@@ -148,7 +114,6 @@ function validateQuantity(quantity){
     }
 
 }
-
 
 //generate all the item rows
 function generateItemRows() {
@@ -196,7 +161,6 @@ function generateItemRows() {
             subtotal += extendedPrice;
 
             // Determine the original position based on the item's type
-            
             console.log(`${item.card}` + `${originalPosition}`);
             // Create a new row and insert the info
             let row = table.insertRow();
@@ -222,10 +186,9 @@ function generateItemRows() {
         </div>`;
         }
     }
-
     // Additional code if needed for handling errors or other logic
     if (hasErrors) {
-        // Handle any actions required when there are errors
+
     }
 }
 function validateQuantityBox(quantity) {
@@ -236,7 +199,6 @@ function validateQuantityBox(quantity) {
 
     // Reset the border color to black before performing validation
     inputElement.style.borderColor = "black";
-
 
     // Check for validation errors and set the border color to red if an error is found
     if (isNaN(quantityNumber)) {
