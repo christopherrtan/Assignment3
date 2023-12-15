@@ -1,0 +1,130 @@
+[
+	{
+		"type": "heirloom",
+		"card": "Bangalore's Cold Steel",
+		"price": 5.00,
+		"image": "./images/bangalore.jpg",
+		"qty_available": 75
+	},
+	{
+		"type": "heirloom",
+		"card": "Pathfinder's Boxing Gloves",
+		"price": 10.00,
+		"image": "./images/pathfinder.jpg",
+		"qty_available": 50
+	},
+	{
+		"type": "heirloom",
+		"card": "Gibraltar's War Club",
+		"price": 20.00,
+		"image": "./images/gibraltar.jpg",
+		"qty_available": 20
+	},
+	{
+		"type": "heirloom",
+		"card": "Bloodhound's Raven's Bite",
+		"price": 25.00,
+		"image": "./images/bloodhound.jpg",
+		"qty_available": 10
+	},
+	{
+		"type": "heirloom",
+		"card": "Octane's Butterfly Knife",
+		"price": 100.00,
+		"image": "./images/octane.jpg",
+		"qty_available": 10
+	},
+	{
+		"type": "heirloom",
+		"card": "Wraith's Kunai",
+		"price": 500.00,
+		"image": "./images/wraith.jpg",
+		"qty_available": 5
+	},
+	{
+		"type":"ability",
+		"card": "Dome of Protection",
+		"price": 1.00,
+		"image": "./images/dome.png",
+		"qty_available": 100
+	},
+	{
+		"type":"ability",
+		"card": "Echo Relocation",
+		"price": 2.00,
+		"image": "./images/echo.png",
+		"qty_available": 100
+	},
+	{
+		"type":"ability",
+		"card": "Eye of the Allfather",
+		"price": 3.00,
+		"image": "./images/eye.png",
+		"qty_available": 100
+	},
+	{
+		"type":"ability",
+		"card": "Grappling Hook",
+		"price": 4.00,
+		"image": "./images/hook.png",
+		"qty_available": 100
+	},
+	{
+		"type":"ability",
+		"card": "Gravity Lift",
+		"price": 5.00,
+		"image": "./images/lift.png",
+		"qty_available": 100
+	},
+	{
+		"type":"ability",
+		"card": "Into the Void",
+		"price": 10.00,
+		"image": "./images/void.png",
+		"qty_available": 100
+	},
+	{
+		"type":"ulti",
+		"card": "Black Hole",
+		"price": 20.00,
+		"image": "./images/blackhole.png",
+		"qty_available": 50
+	},
+	{
+		"type":"ulti",
+		"card": "Defensive Bombardment",
+		"price": 25.00,
+		"image": "./images/bombardment.png",
+		"qty_available": 50
+	},
+	
+	{
+		"type":"ulti",
+		"card": "Beast of the Hunt",
+		"price": 30.00,
+		"image": "./images/hunt.png",
+		"qty_available": 50
+	},
+	{
+		"type":"ulti",
+		"card": "Dimensional Rift",
+		"price": 35.00,
+		"image": "./images/rift.png",
+		"qty_available": 50
+	},
+	{
+		"type":"ulti",
+		"card": "Sniper's Mark",
+		"price": 40.00,
+		"image": "./images/sniper.png",
+		"qty_available": 50
+	},
+	{
+		"type":"ulti",
+		"card": "Zipline Gun",
+		"price": 45.00,
+		"image": "./images/zip.png",
+		"qty_available": 50
+	}
+	
+]

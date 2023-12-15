@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heirloom Harbor Store</title>
+    <!-- Using Bootstrap 4 -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script type="text/javascript" src="./products.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="./index.html">Heirloom Harbor</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="./index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Skills/Weapons
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="./store.html">Heirlooms</a>
+                        <a class="dropdown-item" href="./storeUlts.html">Ultimates</a>
+                        <a class="dropdown-item" href="./storeAbilities.html">Abilities</a>
+                    </div>
+                </li>
+            </ul>
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="./invoice.html" id="cartText">View Cart</a>
+                <div id="loginPlaceholder">
+                    <a class="nav-item nav-link" href="./login.html" id="signInLink">Sign In</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Modal for thank you message --> 
+    <div class="modal fade" id="thanksModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Thank You For Ordering!</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <div class="col text-center">
+                <img src="./images/thanks.jpg" alt="Product Image" width="400" height="400">
+            </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <div class="container">
+        <div class="col text-center">
+            <div id="errorDiv"></div>
+        </div>
+    </div>
+
+    <!-- Defines a form with method POST and hidden values for username and full name -->
+    <form name="qty_form" action="process_form" method="POST">
+        <input type="hidden" name="username" id="usernameEntered">
+        <input type="hidden" name="fullName" id="fullNameHere">
+        <input type="hidden" name="storeName" id="storeName">
+        <input type="hidden" name="type" id="type">
+        <h1><span id="top_title"></span></h1>
+        <div class="container">
+            <div class="row">
+                <!-- Rows will be added dynamically -->
+            </div>
+        </div>
+
+        <!-- Creates a centered button for submission -->
+        <footer class="text-center py-4">
+            <div class="row">
+                <div class="col">
+                </div>
+            </div>
+        </footer>
+    </form>
+</body>
+<script src="storeAbilities.js"></script>
+</html>
